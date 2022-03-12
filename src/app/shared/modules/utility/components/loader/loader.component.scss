@@ -1,0 +1,44 @@
+@import 'assets/variables/colors';
+
+:host {
+  display: contents;
+}
+
+.loader {
+  $transition: transform 0.2s linear;
+
+  background: $grey-100;
+  border-radius: 50%;
+  position: relative;
+
+  &__mask {
+    border-radius: 50%;
+    position: absolute;
+    transition: $transition;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__fill {
+    border-radius: 50%;
+    position: absolute;
+    transition: $transition;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__content {
+    align-items: center;
+    border-radius: 50%;
+    background: $grey;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+}

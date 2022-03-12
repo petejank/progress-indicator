@@ -1,0 +1,20 @@
+@import 'assets/mixins/screen';
+@import 'assets/functions/sizing';
+@import 'assets/variables/sizing';
+
+:host {
+  display: contents;
+}
+
+.app {
+  padding: size(8) 0;
+  width: 100%;
+}
+
+@include screen-medium-up {
+  .app {
+    max-width: $max-app-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,11 @@
+<figure [style]="loaderStyle()" class="loader">
+  <div [style]="maskStyle(true)" class="loader__mask">
+    <div [style]="fillStyle(true)" class="loader__fill"></div>
+  </div>
+  <div [style]="maskStyle()" class="loader__mask">
+    <div [style]="fillStyle()" class="loader__fill"></div>
+  </div>
+  <div class="loader__content">
+    <app-typography [large]="true" data-testid="loader-progress" weight="bold">{{ progress }}%</app-typography>
+  </div>
+</figure>
